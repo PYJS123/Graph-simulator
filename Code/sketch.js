@@ -31,9 +31,7 @@ function draw() {
 function small(list) {
   smal = Infinity;
   for (let i = 0; i < list.length; i++) {
-    if (i < smal) {
-      smal = i;
-    }
+    smal = min(smal, list[i]);
   }
 
   return smal;
@@ -42,9 +40,7 @@ function small(list) {
 function big(list) {
   bigg = -Infinity;
   for (let i = 0; i < list.length; i++) {
-    if (i > bigg) {
-      bigg = i;
-    }
+    bigg = max(bigg, list[i]);
   }
 
   return bigg;
