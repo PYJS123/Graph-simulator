@@ -6,7 +6,7 @@ let minm, maxm;
 function setup() {
   createCanvas(windowWidth - 20, windowHeight - 20);
   for (let i = 0; i < TWO_PI * 10; i += TWO_PI / 50) {
-    totalPoints.push(sin(i) * 100);
+    totalPoints.push((noise(i) * 200) - 100);
   }
   stroke(255);
 }
